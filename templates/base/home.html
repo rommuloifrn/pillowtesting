@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        main {
+            display: flex;
+        }
+        .pillow {
+            border: 2px solid grey;
+            margin: 1em;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+
+        {%for photo in photos%}
+            <div class="pillow">
+                <span class="photoname"><h1>{{photo.name}}</h1></span>
+                <img src="{{photo.img.url}}">
+            </div>
+        {%endfor%}
+
+    </main>
+
+</body>
+</html>
